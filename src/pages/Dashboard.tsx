@@ -24,13 +24,13 @@ function StockRing({ label, value, total, color }: {
   );
 }
 
-function Metric({ label, value, suffix = "", sub, delay = 0 }: {
-  label: string; value: number; suffix?: string; sub?: string; delay?: number;
+function Metric({ label, value, suffix = "", sub, delay = 0, color= '' }: {
+  label: string; value: number; suffix?: string; sub?: string; delay?: number; color?: string;
 }) {
   const { ref, inView } = useInView();
   const count = useCounter(value, 900, inView);
   return (
-    <div ref={ref} className="bg-white border border-gray-200 rounded-lg p-5 w-full min-w-0"
+    <div ref={ref} className={`bg-white border border-gray-200 rounded-lg p-5 w-full min-w-0 ${color}`}
       style={{ opacity: inView ? 1 : 0, transition: `opacity 0.3s ease ${delay}s` }}>
       <p className="text-xs text-gray-500 mb-2">{label}</p>
       <p className="text-2xl font-bold text-gray-900 tabular-nums">{count.toLocaleString("ru-RU")}{suffix}</p>
