@@ -1,0 +1,10 @@
+{
+  "description": "Streamline inventory management for small businesses with features to add products, track stock levels, and manage shipments and deliveries efficiently.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
